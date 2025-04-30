@@ -1,0 +1,58 @@
+/* public/styles.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  text-align: center;
+}
+
+#auth {
+  margin-top: 100px;
+}
+
+#auth input {
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+}
+
+#auth button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#whiteboard {
+  margin: 20px auto;
+}
+
+#toolbar {
+  margin-bottom: 10px;
+}
+
+#toolbar .tool-group {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#toolbar button {
+  padding: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+#toolbar .color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 2px #000;
+}
+
+canvas {
+  border: 1px solid #ccc;
+  background: #fff;
+}

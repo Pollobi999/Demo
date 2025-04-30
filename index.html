@@ -1,0 +1,42 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collaborative Whiteboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Authentication Section -->
+  <div id="auth">
+    <h1>Collaborative Whiteboard</h1>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button id="registerBtn">Register</button>
+    <button id="loginBtn">Login</button>
+  </div>
+
+  <!-- Whiteboard Section (hidden until login) -->
+  <div id="whiteboard" style="display: none;">
+    <div id="toolbar">
+      <div class="tool-group">
+        <label for="brushSize">Brush Size:</label>
+        <input id="brushSize" type="range" min="2" max="20" value="5" />
+      </div>
+      <button class="color" data-color="black" style="background-color: black;" title="Black"></button>
+      <button class="color" data-color="red" style="background-color: red;" title="Red"></button>
+      <button class="color" data-color="blue" style="background-color: blue;" title="Blue"></button>
+      <button class="color" data-color="green" style="background-color: green;" title="Green"></button>
+      <button id="eraser" title="Eraser">Eraser</button>
+      <button id="clearCanvas" title="Clear Canvas">Clear</button>
+    </div>
+    <canvas id="board" width="800" height="600"></canvas>
+  </div>
+
+  <!-- Socket.io client library -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- App logic -->
+  <script src="app.js"></script>
+</body>
+</html>
